@@ -9,7 +9,7 @@ class chatbot():
     def __init__(self):
         self.default=["Sorry, I do not understand.", "Umm, would you please clarify?", "I do not get what you mean!", "That is beyond my context!"]
         self.bye=['bye','quit','goodbye','finish','end']
-        with open("raw1.pickle", "rb") as f:
+        with open("raw.pickle", "rb") as f:
             self.q, self.a ,self.emo ,self.topic ,self.act, self.q_tfidf, self.tfidf_vectorizer= pickle.load(f)
             
     def match(self, query, threshold=0.6):
